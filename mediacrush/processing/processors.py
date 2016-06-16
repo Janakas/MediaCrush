@@ -143,7 +143,7 @@ class JPEGProcessor(Processor):
     outputs = ['jpg']
 
     def sync(self):
-        self._execute("jhead -purejpg {0}")
+        self._execute("jhead -purejpg -autorot {0}")
         self._execute("cp {0} {1}.{extension}")
 
 class SVGProcessor(Processor):
